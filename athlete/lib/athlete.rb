@@ -15,9 +15,10 @@ class Athlete
   end
 
   def validate_time # operador ternario
-    if @total_time > 0 && @total_distance == 0
-      raise "Values are not valid"
-    end
+    (if @total_time > 0 && @total_distance == 0 then raise "Values are not valid" end)
+    # if @total_time > 0 && @total_distance == 0
+    #   raise "Values are not valid"
+    # end
   end
 
   def new_workout(distance, time)
